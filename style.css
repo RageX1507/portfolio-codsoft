@@ -1,0 +1,332 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: yo;
+    src: url(/font.otf);
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;}
+    
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+   position: fixed;
+    top: 0;
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    z-index: 1000;
+    
+}
+.x{
+    color: red;
+    font-weight: 700;
+
+}
+.img-container{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+
+}
+.nav .navb{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(90deg , transparent , #fff);
+    animation: animate 5s infinite linear;
+}
+@keyframes animate{
+    0%{
+        left:0;
+        transform:translate(-100%)
+    }
+    100%{
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+li{
+    list-style: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu{
+    padding-left: 25% ;
+    display: flex;
+    gap: 5rem;
+    font-weight: 100;
+}
+#btn{
+    letter-spacing: 3px;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 1rem;
+}
+#logo{
+    position: absolute;
+    right: 89%;
+    color: #fff;
+    font-size: 30px;
+}
+.video-section video{
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+.img-container img{
+    height: 100%;
+    width: 100%;
+
+}
+.first-img{
+    object-fit: cover;
+    height: 100%;
+    overflow: hidden;
+}
+.mine{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.sec{
+    background-color: #4F4557;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.txt{
+    font-size: 5vh;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    margin: 8% ;
+    color: antiquewhite;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.left{
+    position: absolute;
+    right: 40%;
+    color: antiquewhite;
+    width: 50%;
+    
+}
+.right{
+    border-radius: 1rem;
+    position: absolute;
+    background-color: #4F4557;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    height: 80%;
+    width: 30%;
+    left: 65%;
+    object-fit: cover;
+}
+p{
+    font-size: 90%;
+    
+}
+.txt-container{
+    position: absolute;
+    top: 0;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-txt{
+    position: relative;
+    width: 90%;
+    font-size: 40px;
+    font-family: "yo";
+}
+#ftxt {
+    letter-spacing: 20px;
+    position: absolute;
+    right:67%;
+    color: antiquewhite;
+    top:-40px;
+    font-size: 30px;
+}
+#stxt{
+    letter-spacing: 20px;
+    position: absolute;
+    top: 330px;
+    left: 35%;
+    font-size: 40%;
+}
+#ttxt{
+    letter-spacing: 20px;
+    font-size:30px ;
+    position: absolute;
+    right: 5%;
+    top: -45px;
+    color: antiquewhite;}
+
+#skillsec {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+}
+
+#skillsec h1{
+    left: -190px;
+    font-family: yo;
+    color: antiquewhite;
+    position: relative;
+    bottom: 290px;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar {
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+
+.skill-per {
+    height: 14px;
+    background: #d13639;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f1f1f1;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.contact-section{
+    height: 100vh;
+    width: 100vw;
+    background-color:#282828;
+
+    
+}
+.contact-section h1{
+    position: relative;
+    color: antiquewhite;
+    top: 10%;
+    left: 32%;
+    letter-spacing: 4px;
+    font-family: "yo";
+    font-size: 50px;
+    
+}
+.contact-section .h33{
+    position: relative;
+        color: antiquewhite;
+        top: 63%;
+        letter-spacing: 2px;
+        left: 32%;
+
+}
+.contact-section h3{
+    position: relative;
+        color: antiquewhite;
+        top: 65%;
+        letter-spacing: 2px;
+        left: 22%;
+}
+.contact-button{
+    border-radius: 1rem;
+    letter-spacing: 3px;
+    font-size: 15px;
+    position: relative;
+    color: black;
+    background-color: antiquewhite;
+    top: 27%;
+    left: 20%;
+    padding: 15px 15px;
+}
+.email-button {
+    border-radius: 1rem;
+    letter-spacing: 3px;
+    font-size: 15px;
+    position: relative;
+    color: black;
+    background-color: antiquewhite;
+    top: 27%;
+    left: 27%;
+    padding: 15px 30px;
+}
+.contact-section img{
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.2);
+        height: 47%;
+        width: 19%;
+        left: 40%;
+        top:8%;
+        object-fit:contain;
+        border-radius: 1rem;
+}
